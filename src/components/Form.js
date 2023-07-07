@@ -41,7 +41,11 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formValues);
+    console.log(
+      formValues.map((val) => {
+        return { [val.label]: val.value };
+      })
+    );
   };
 
   return (
