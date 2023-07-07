@@ -85,7 +85,7 @@ const Form = () => {
         )}
 
         <button type="submit" className="submit-btn">
-          Sumbit
+          SUBMIT
         </button>
       </form>
     </div>

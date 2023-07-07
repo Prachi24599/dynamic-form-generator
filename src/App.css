@@ -1,23 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 .App {
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 form {
-  background-color: peachpuff;
+  background-color: #d1e7dd;
   width: 500px;
   max-width: 800%;
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  box-shadow: 0 0 50px #d1e7dd;
 }
 form > div {
   display: flex;
 }
 .input-group {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  /* flex-direction: column; */
   margin: 1rem 0;
 }
 .input-group > label {
@@ -59,9 +67,8 @@ form > div {
   width: 100%;
   padding: 0.5rem 1rem;
   margin: 1.2rem 0;
-  background-color: rgb(109, 109, 191);
+  background-color: #0d6efd;
   border-radius: 5px;
-  color: white;
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
