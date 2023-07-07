@@ -63,6 +63,9 @@ const Form = () => {
               <option value="number">Number</option>
               <option value="email">Email</option>
               <option value="password">Password</option>
+              <option value="checkbox">Checkbox</option>
+              <option value="radio">Radio</option>
+              <option value="select">Select</option>
             </select>
             <button className="add-btn" onClick={handleAddField}>
               Add
