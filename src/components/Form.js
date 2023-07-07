@@ -11,7 +11,7 @@ const Form = () => {
   }
 
   function handleSubmit(e) {
-    e.prevFormValues();
+    e.preventDefault();
     console.log(formValues);
   }
 
