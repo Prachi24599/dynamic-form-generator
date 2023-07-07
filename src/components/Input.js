@@ -2,7 +2,6 @@ import React from "react";
 
 const Input = ({ objValue, onChange, index, deleteField }) => {
   const { label, type, value } = objValue;
-
   return (
     <div className="input-group">
       <label htmlFor={label}>{label}</label>

@@ -40,6 +40,7 @@ const Form = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log(formValues);
     e.preventDefault();
     console.log(
       formValues.map((val) => {
