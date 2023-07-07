@@ -33,6 +33,12 @@ const Form = () => {
     setTogggle(true);
   };
 
+  const handleDeleteField = (e, index) => {
+    const values = [...formValues];
+    values.splice(index, 1);
+    setFormValues(values);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formValues);
@@ -47,6 +53,7 @@ const Form = () => {
             objValue={obj}
             onChange={handleChange}
             index={index}
+            deleteField={handleDeleteField}
           />
         ))}
         {!toggle ? (

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = ({ objValue, onChange, index }) => {
+const Input = ({ objValue, onChange, index, deleteField }) => {
   const { label, type, value } = objValue;
 
   return (
@@ -13,6 +13,7 @@ const Input = ({ objValue, onChange, index }) => {
           value={value || ""}
           onChange={(e) => onChange(e, index)}
         />
+        <div onClick={(e) => deleteField(e, index)}>X</div>
       </div>
     </div>
   );
