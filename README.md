@@ -3,7 +3,7 @@
 
 ## 📌 Demo 
 
-[Link to Live Demo](https://codebox-code-editor.netlify.app/) 🚀
+[Link to Live Demo](https://dynamic-form-generator-pp.netlify.app/) 🚀
 
 ## 📌 Features
 
@@ -16,7 +16,7 @@
 
 Follow these steps to get the project up and running on your local machine:
 
-1. Clone the repository: `git clone https://github.com/Prachi24599/code-box.git`
+1. Clone the repository: `git clone https://github.com/Prachi24599/dynamic-form-generator.git`
 2. Navigate to the project directory: `cd dynamic-form-generator
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm start`
