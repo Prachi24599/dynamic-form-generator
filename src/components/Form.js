@@ -1,13 +1,21 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import Input from "./Input";
 
 const Form = () => {
-  const [formValues, setFormValues] = useState({});
+  const [formValues, setFormValues] = useState([
+    {
+      label: "Name",
+      type: "text",
+      value: "",
+    },
+  ]);
 
-  function handleChange(e) {
-    setFormValues((prevFormValues) => {
-      return { ...prevFormValues, [e.target.id]: e.target.value };
-    });
+  function handleChange(e, index) {
+    const values = [...formValues];
+    console.log(values);
+    values[index].value = e.target.value;
+    setFormValues(values);
   }
 
   function handleSubmit(e) {
@@ -18,24 +26,14 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="input-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            value={formValues.name || " "}
+        {formValues.map((obj, index) => (
+          <Input
+            key={index}
+            objValue={obj}
             onChange={handleChange}
+            index={index}
           />
-        </div>
-        <div className="input-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={formValues.email || ""}
-            onChange={handleChange}
-          />
-        </div>
+        ))}
         <button type="submit" className="submit-btn">
           Sumbit
         </button>
