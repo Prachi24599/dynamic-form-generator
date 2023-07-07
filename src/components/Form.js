@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
 import Input from "./Input";
+import { form as JsonForm } from "../JsonData";
 
 const Form = () => {
   const [formValues, setFormValues] = useState([]);
@@ -11,7 +12,6 @@ const Form = () => {
 
   const handleChange = (e, index) => {
     const values = [...formValues];
-    console.log(values);
     values[index].value = e.target.value;
     setFormValues(values);
   };
@@ -40,7 +40,8 @@ const Form = () => {
   };
 
   const handleSubmit = (e) => {
-    console.log(formValues);
+    JsonForm.values.push([...formValues]);
+    console.log(JsonForm);
     e.preventDefault();
     console.log(
       formValues.map((val) => {
